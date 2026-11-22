@@ -52,7 +52,7 @@ public class SecurityConfig {
     @Bean
     CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration c = new CorsConfiguration();
-        c.setAllowedOrigins(List.of("http://localhost:4200", "http://127.0.0.1:4200"));
+        c.setAllowedOrigins(List.of("http://localhost:4200", "http://127.0.0.1:4200", "https://friendly-gingersnap-beb908.netlify.app"));
         c.setAllowedMethods(List.of("GET", "POST", "PUT", "OPTIONS"));
         c.setAllowedHeaders(List.of("Authorization", "Content-Type", "Accept"));
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
