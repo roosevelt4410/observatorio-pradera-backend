@@ -1,0 +1,18 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/observatorio_pradera}
+    username: ${DB_USER:observatorio}
+    password: ${DB_PASSWORD:observatorio_dev}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
+
+observatorio:
+  admin:
+    username: ${OBS_ADMIN_USER:admin}
+    password: ${OBS_ADMIN_PASSWORD:}
