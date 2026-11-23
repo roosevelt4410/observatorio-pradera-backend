@@ -41,7 +41,7 @@ public class SecurityConfig {
             .sessionManagement(s -> s.sessionCreationPolicy(org.springframework.security.config.http.SessionCreationPolicy.STATELESS))
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
-                .requestMatchers(HttpMethod.GET, "/api/v1/salud", "/api/v1/indicadores/**").permitAll()
+                .requestMatchers(HttpMethod.GET, "/api/v1/salud", "/api/v1/indicadores/**", "/api/v1/directorio/empresas").permitAll()
                 .requestMatchers(HttpMethod.POST, "/api/v1/caracterizaciones/EMPRESA", "/api/v1/caracterizaciones/TALENTO").permitAll()
                 .requestMatchers("/api/v1/caracterizaciones/**").hasRole("ADMIN")
                 .anyRequest().denyAll())
